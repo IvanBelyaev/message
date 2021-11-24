@@ -19,7 +19,7 @@
 Токен нужно добавлять в заголовок Authorization для всех последующих запросов.  
 Через токен происходит авторизация.  
 
-При POST-запросе на http://localhost:8080/message с JSON вида  
+При POST-запросе на http://localhost:8080/messages с JSON вида  
 {  
 &nbsp;&nbsp;&nbsp;&nbsp; "name" : "john",  
 &nbsp;&nbsp;&nbsp;&nbsp; "message" : "hello"  
@@ -27,7 +27,7 @@
 сервер сохраняет сообщение пользователя.  
 Имя пользователя должно совпадать с именем авторизированного пользователя.  
 
-При POST-запросе на http://localhost:8080/message с JSON вида  
+При POST-запросе на http://localhost:8080/messages с JSON вида  
 {  
 &nbsp;&nbsp;&nbsp;&nbsp; "name" : "john",  
 &nbsp;&nbsp;&nbsp;&nbsp; "message" : "history 10"  
@@ -37,9 +37,10 @@
 
 Запуск проекта
 
-1. Склонировать репозиторий
-2. mvn clean package
-3. docker-compose up
+1. git clone git@github.com:IvanBelyaev/message.git
+2. cd ./message/
+3. mvn clean package
+4. docker-compose up --force-recreate
 
 
 Интерфейс проекта
